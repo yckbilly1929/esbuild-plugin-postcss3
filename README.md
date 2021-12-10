@@ -1,17 +1,21 @@
-# esbuild-plugin-postcss2
+# esbuild-plugin-postcss3
 
-This plugin is an optimized, type-friendly version of [esbuild-plugin-postcss](https://github.com/deanc/esbuild-plugin-postcss). It supports CSS preprocessors and CSS modules.
+This plugin is forked from [esbuild-plugin-postcss2](https://github.com/martonlederer/esbuild-plugin-postcss2).
+
+It fix some bugs of upstream likes can't compile with bluma-css, fluent-ui.
+
+It also support cache, it can reduce the incremental rebuild time in dev mode from several seconds to less than one second.
 
 ## Install
 
 ```sh
-yarn add -D esbuild-plugin-postcss2
+yarn add -D @baurine/esbuild-plugin-postcss3
 ```
 
 or
 
 ```sh
-npm i -D esbuild-plugin-postcss2
+npm i -D @baurine/esbuild-plugin-postcss3
 ```
 
 ## Usage
@@ -20,7 +24,7 @@ Add the plugin to your esbuild plugins:
 
 ```js
 const esbuild = require("esbuild");
-const postCssPlugin = require("esbuild-plugin-postcss2");
+const postCssPlugin = require("@baurine/esbuild-plugin-postcss3");
 
 esbuild.build({
   ...
@@ -85,7 +89,7 @@ To reduce the rebuild time in dev mode, you can try to cache the CSS compilation
 
 ```js
 const esbuild = require("esbuild");
-const postCssPlugin = require("esbuild-plugin-postcss2");
+const postCssPlugin = require("@baurine/esbuild-plugin-postcss3");
 
 esbuild.build({
   ...

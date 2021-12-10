@@ -1,9 +1,9 @@
 {
   "name": "@baurine/esbuild-plugin-postcss3",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "description": "Use postcss with esbuild",
-  "repository": "https://github.com/martonlederer/esbuild-plugin-postcss2",
-  "author": "Marton Lederer <marton@lederer.hu>",
+  "repository": "https://github.com/baurine/esbuild-plugin-postcss3",
+  "author": "baurine <2008.hbl@gmail.com>",
   "license": "MIT",
   "private": false,
   "publishConfig": {
