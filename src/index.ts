@@ -51,13 +51,13 @@ export const defaultOptions: PostCSSPluginOptions = {
 };
 
 const postCSSPlugin = ({
-  plugins = [],
-  modules = true,
-  rootDir = process.cwd(),
-  sassOptions = {},
-  lessOptions = {},
-  stylusOptions = {},
-  writeToFile = true
+  plugins,
+  modules,
+  rootDir,
+  sassOptions,
+  lessOptions,
+  stylusOptions,
+  writeToFile
 }: PostCSSPluginOptions = defaultOptions): Plugin => ({
   name: "postcss2",
   setup(build) {
