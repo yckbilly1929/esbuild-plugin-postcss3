@@ -110,6 +110,15 @@ const postCSSPlugin = ({
         });
 
         const sourceExt = path.extname(sourceFullPath);
+        if (
+          sourceExt !== ".css" &&
+          sourceExt !== ".sass" &&
+          sourceExt !== ".scss" &&
+          sourceExt !== ".less" &&
+          sourceExt !== ".styl"
+        ) {
+          return;
+        }
         const sourceBaseName = path.basename(sourceFullPath, sourceExt);
         const isModule = sourceBaseName.match(/\.module$/);
 
